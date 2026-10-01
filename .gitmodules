@@ -1,0 +1,6 @@
+[submodule "third-party/modded-nanogpt-jax"]
+	path = third-party/modded-nanogpt-jax
+	url = https://github.com/norxornor/modded-nanogpt-jax
+[submodule "third-party/nanogpt-speedrun-rtx5090x1"]
+	path = third-party/nanogpt-speedrun-rtx5090x1
+	url = https://github.com/takuma104/nanogpt-speedrun-rtx5090x1
