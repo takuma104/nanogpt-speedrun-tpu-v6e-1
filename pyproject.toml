@@ -4,4 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "einops>=0.8.2",
+    "huggingface-hub>=2.1.1",
+    "jax>=0.7",
+    "jax[tpu]>=0.7 ; sys_platform == 'linux'",
+    "numpy>=2.5.3",
+]
