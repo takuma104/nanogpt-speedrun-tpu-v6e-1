@@ -12,7 +12,7 @@
 - v6e-1 を提供するゾーン: asia-east1-c, asia-northeast1-b, asia-south1-b/c, asia-southeast1-b, europe-west4-a, southamerica-east1-c, southamerica-west1-a, us-central1-a/b/c, us-east1-d, us-east4-a, us-east5-a/b/c, us-south1-a/c, us-west1-c
 - クォータ: v6e（on-demand / preemptible とも）既定 16 chip/zone。ただし us-east4-a/b と us-east5-c は 0
 - Spot 価格の目安（第三者サイト、変動あり）: us-east4 $0.24/h, asia-southeast1 $0.27/h, us-central1 / us-east1 / us-west1 $0.65/h。on-demand は $2.70/h（米国）
-- 2026-10-02 の Spot 空き状況: asia-southeast1-b, us-central1-a/b/c は容量なし、us-east1-d で作成成功 → **約 10 分で preempt（ノードごと削除）**
+- 2026-10-02 の Spot 空き状況: asia-southeast1-b, us-central1-a/b/c は容量なし、us-east1-d で作成成功（CREATING に約 15 分）→ **約 10 分で preempt（ノードごと削除）**。直後の再試行（us-east1-d, us-central1-a/b/c, us-west1-c, us-south1-a/c, asia-southeast1-b, us-east5-a/b）は全ゾーン容量なし（us-east1-d は CREATING で約 23 分待った末に失敗）
 
 ### VM（`ct6e-standard-1t`, runtime `v6e-ubuntu-2404`）
 
