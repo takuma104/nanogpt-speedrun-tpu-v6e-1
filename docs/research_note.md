@@ -13,7 +13,7 @@
 - クォータ: v6e（on-demand / preemptible とも）既定 16 chip/zone。ただし us-east4-a/b と us-east5-c は 0
 - Spot 価格の目安（第三者サイト、変動あり）: us-east4 $0.24/h, asia-southeast1 $0.27/h, us-central1 / us-east1 / us-west1 $0.65/h。on-demand は $2.70/h（米国）
 - 2026-10-02 の Spot 空き状況: asia-southeast1-b, us-central1-a/b/c は容量なし、us-east1-d で作成成功（CREATING に約 15 分）→ **約 10 分で preempt（ノードごと削除）**。直後の再試行（us-east1-d, us-central1-a/b/c, us-west1-c, us-south1-a/c, asia-southeast1-b, us-east5-a/b）は全ゾーン容量なし（us-east1-d は CREATING で約 23 分待った末に失敗）
-- on-demand は全ゾーンで `User does not have permission to submit requests for accelerator type "v6e-1"`（クォータ表示は 16 だが実際には未許可）→ コンソールでの割り当て申請が必要
+- on-demand: us-east1-d で `User does not have permission to submit requests for accelerator type "v6e-1" in location us-east1-d`（code 7, EID 0xfdbc92b2a40788bd, 2026-10-01 17:46 UTC）。クォータ表示は 16 だが実際には未許可 → サポートへ問い合わせ。他の 9 ゾーンも即座に失敗したがメッセージは未記録
 - Compute Engine 側（`ct6e-standard-1t` + Flex-start）は v6e のクォータ項目自体が無く使えない（v5 lite のみ）
 - 残りゾーンで Spot 再試行: southamerica-west1-a で READY になった直後にメンテナンスイベントで DELETING
 
